@@ -1,15 +1,18 @@
 {
   "name": "tranquil-bayou-49389",
+  "description": "A sample Node.js app using Express 4 integrated with Angular",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "node index.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot"
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build --aot --prod"
   },
+  "main": "index.js",
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.3",
@@ -24,6 +27,7 @@
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
+    "ejs": "^2.5.6",
     "express": "^4.16.3",
     "path": "^0.12.7",
     "rxjs": "^6.0.0",
@@ -48,6 +52,8 @@
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.3.0",
+    "request": "^2.81.0",
+    "tape": "^4.7.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
